@@ -1,5 +1,5 @@
 # Course-tip
-Course-tip is a website where a user can come search for a course or can initialize a review and ask for feedback from others who have attended the course. This allows the user to decide which course is best for him/her and saves their time.
+ Course-tip is a website where a user can come search for a course or can initialize a review and ask for feedback from others who have attended the course. This allows the user to decide which course is best for him/her and saves their time.
 
 ## Features
 
@@ -47,4 +47,5 @@ You will know server is running by checking the output of the command `node app.
 Every project needs improvements, Feel free to report any bugs or improvements. Pull requests are always welcome.
 
 ### bugs
-- Server side validation for Login/ Sign-up
+- It currently does not let the user save any course.
+- It does not let the user search for any course.
