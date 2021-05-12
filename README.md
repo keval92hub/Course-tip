@@ -22,8 +22,9 @@
 
 ### Install npm dependencies after installing (Git or manual download)
 
-bash
+---bash
 npm install
+---
 
 
 ## How to run
