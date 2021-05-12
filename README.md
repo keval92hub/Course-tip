@@ -22,23 +22,23 @@
 
 ### Install npm dependencies after installing (Git or manual download)
 
----bash
+~~~bash
 npm install
----
+~~~
 
 
 ## How to run
 
 ### Running API server locally
 
-bash
+~~~bash
 node app.js
-
+~~~
 If you have nodemon package then,
 
-bash
+~~~bash
 nodemon app.js
-
+~~~
 
 You will know server is running by checking the output of the command `node app.js`
 
