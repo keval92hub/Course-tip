@@ -1,0 +1,55 @@
+<%- include('./partials/head.ejs') %>
+
+<div class="flex md:flex-row-reverse flex-wrap">
+  <div class="w-full md:w-4/5 bg-gray-100">
+    <div class="container bg-gray-100 pt-16 px-6">
+      
+      <div class="flex justify-between items-center pb-2">
+        <p class="text-2xl font-bold mx-auto md:w-full">FreeCodeCamp</p>
+      </div>
+
+      <div class="flex flex-wrap -m-4">
+        <% if(courseReviews.length > 0) { %>
+          <% courseReviews.forEach(course => { %>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-300 p-6 rounded-lg">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-2"><%= course.user %></h2>
+                <p class="leading-relaxed text-base"><%= course.review %></p>
+              </div>
+            </div>
+            <% }) %>
+        <% } %>
+        <!-- <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div class="border border-gray-300 p-6 rounded-lg">
+            <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
+            <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+          </div>
+        </div> -->
+      </div>
+    </div>  
+    <section class="fixed bottom-0 right-0">
+      <form class="flex w-full" method="POST" action="/login">
+        <div class="mb-6 pt-3 rounded bg-gray-200">
+            <label class="inline-flex text-gray-700 text-sm font-bold mb-2 ml-3" for="course-name">write a review</label>
+            <input type="text" id="course-name" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" required>
+        </div>
+        <button class="mb-6 mx-3 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded shadow-lg hover:shadow-xl transition duration-200 px-3 py-3 h-auto" type="submit">Add</button>
+      </form>
+    </section>
+  </div>
+  
+</div>
+
+<%- include('./partials/nav.ejs') %>

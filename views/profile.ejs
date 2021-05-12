@@ -1,0 +1,89 @@
+<%- include('./partials/head.ejs') %>
+
+<div class="flex md:flex-row-reverse flex-wrap">
+    <div class="w-full md:w-4/5 bg-gray-100">
+        <div class="container bg-gray-100 pt-16 px-6">
+            
+            <div class="md:w-9/12 md:mr-16 flex items-center border-gray-200 border p-4 rounded-lg">
+                <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/80x80">
+                <div class="flex-grow">
+                  <h2 class="text-gray-900 title-font font-medium">User</h2>
+                  <% if (user) { %>
+                    <!-- <div class="flex justify-center md:justify-end"> -->
+                      <!-- <a href="/logout" class="text-red-500 border-red-500 md:border-2 hover:bg-red-500 hover:text-white transition ease-out duration-500 font-bold py-2 px-4 rounded-full m-4 ml-0">Log out</a> -->
+                      <!-- <p class="text-red-500 ml-2 border-red-500 md:border-2 hover:bg-red-500 hover:text-white transition ease-out duration-500 font-bold py-2 px-4 rounded-full m-4 ml-0">Welcome <%= user.email %></p> -->
+                      <p class="text-gray-500"><%= user.email %></p>
+                    <!-- </div> -->
+                  <% } %>
+                </div>
+              </div>
+
+              <section class="text-gray-700 body-font">
+                <div class="container px-5 py-24 mx-auto">
+
+                  <div class="flex flex-wrap -m-4">
+
+                    <% if(courses.length > 0) { %>
+                      <% courses.forEach(course => { %>
+
+                        <div class="xl:w-1/4 md:w-1/2 p-4 hover:shadow-md rounded-lg cursor-pointer h-full">
+                          <div class="bg-gray-100 p-6 rounded-lg">
+                            <h3 class="tracking-widest text-indigo-500 text-xl font-bold title-font m-4 ml-0">
+                              <%= course.title %>
+                            </h3>
+                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Descirption: </h2>
+                            <p class="leading-relaxed text-base">
+                              <%= course.description %>
+                            </p>
+                            <a href="/reviews">
+                              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-4 ml-0 ">
+                                Reviews
+                              </button>
+                            </a>
+                          </div>
+                        </div>
+
+                        <% }) %>
+                    <% } %>
+
+                    <!-- <div class="xl:w-1/4 md:w-1/2 p-4">
+                      <div class="bg-gray-100 p-6 rounded-lg">
+                        <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/720x400" alt="content">
+                        <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
+                        <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Chichen Itza</h2>
+                        <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                      </div>
+                    </div>
+                    <div class="xl:w-1/4 md:w-1/2 p-4">
+                      <div class="bg-gray-100 p-6 rounded-lg">
+                        <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/721x401" alt="content">
+                        <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
+                        <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Colosseum Roma</h2>
+                        <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                      </div>
+                    </div>
+                    <div class="xl:w-1/4 md:w-1/2 p-4">
+                      <div class="bg-gray-100 p-6 rounded-lg">
+                        <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/722x402" alt="content">
+                        <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
+                        <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Great Pyramid of Giza</h2>
+                        <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                      </div>
+                    </div>
+                    <div class="xl:w-1/4 md:w-1/2 p-4">
+                      <div class="bg-gray-100 p-6 rounded-lg">
+                        <img class="h-40 rounded w-full object-cover object-center mb-6" src="https://dummyimage.com/723x403" alt="content">
+                        <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
+                        <h2 class="text-lg text-gray-900 font-medium title-font mb-4">San Francisco</h2>
+                        <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+              </section>
+        </div>
+    </div>
+</div>
+
+
+<%- include('./partials/nav.ejs') %>

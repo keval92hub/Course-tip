@@ -1,0 +1,30 @@
+<%- include('./partials/head.ejs') %>
+
+<div class="flex md:flex-row-reverse flex-wrap">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <section class="mb-6 pt-3">
+                <h3 class="font-bold text-2xl">Course-tip</h3>
+                <p class="text-gray-600 pt-2">Ask for review</p>
+            </section>
+        
+            <section>
+                <form class="flex flex-col" method="POST" action="/addcourse">
+                    <div class="mb-6 pt-3 rounded bg-gray-200">
+                        <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="course-name">Course name</label>
+                        <input type="text" name="name" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" required>
+                    </div>
+        
+                    <div class="mb-6 pt-3 rounded bg-gray-200">
+                        <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="course-que">Want to ask anything specific</label>
+                        <input type="text" name="description" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" required>
+                    </div>
+        
+                    <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" type="submit">submit</button>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+
+<%- include('./partials/nav.ejs') %>
