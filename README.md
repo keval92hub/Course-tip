@@ -31,7 +31,7 @@ npm install
 
 ### Running API server locally
 
-~bash
+~~~bash
 node app.js
 ~~~
 If you have nodemon package then,
